@@ -117,63 +117,46 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-
-
-
-
- ## Table of Contents
+## Table of Contents
  * [Installation](#installation)
  * [Usage](#usage)
  * [Contributing](#contributing)
  * [Tests](#tests)
  * [License](#license)
  * [Questions](#questions)
- 
+
+## DESCRIPTION: 
+${data.description}
 
 
+## INSTALLATION: 
+${data.installation}
 
 
-        ## DESCRIPTION: 
-       
-        ${data.description}
+## USAGE: 
+${data.usage}
 
 
-        ## INSTALLATION: 
-       
-        ${data.installation}
+## CONTRIBUTING: 
+${data.contributing}
 
 
-        ## USAGE: 
-        
-        ${data.usage}
+## TESTS: 
+${data.tests}
 
 
-        ## CONTRIBUTING: 
-        
-        ${data.contributing}
+## LICENSE:
+${renderLicenseBadge(data.license)}
+
+${renderLicenseSection(data.license)}
 
 
-        ## TESTS: 
-       
-        ${data.tests}
+## EMAIL:
+${data.email}
 
 
-        ## LICENSE:
-        
-        
-        ${renderLicenseBadge(data.license)}
-
-        ${renderLicenseSection(data.license)}
-
-
-        ## EMAIL:
-       
-        ${data.email}
-
-
-        ## USERNAME: 
-        
-        ${data.username}
+## USERNAME: 
+${data.username}
 `;
 }
 
